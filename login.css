@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+
+section{
+    font-family: 'Open Sans', sans-serif;
+}
+
+section p{
+    color: black;
+}
+.icon{
+    font-size: 1.5em;
+    margin: 10px;
+}
+
+section .btn{
+    background: #0572E6;
+}
+
+.card{
+    border-radius: 15px;
+}
+.text-blue{
+    color: #2067A4;
+}
+
+form{
+    width: 360px;
+    margin-top: 10px;
+}
+
+div.container-login{
+    margin-top: 100px;
+}
+
+body.login{
+    background: #F6F8FA;
+    height: 100vh;
+}
+
+.input-group i{
+    color: black;
+}
+section.login{  
+    height: 100%;
+}
+
+.card{
+    color: black;
+    background:white
+}
+
+/* Form */
+.input{
+    color: black;
+}
+
+.input:focus{
+    box-shadow: none;
+    border-color: none;
+    outline: #2477AF auto 5px ;
+}
+
+.input{
+    width: 95%;
+}

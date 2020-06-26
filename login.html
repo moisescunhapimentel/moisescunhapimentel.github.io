@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/c2e1d2301a.js" crossorigin="anonymous"></script>
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="login.css">
+
+</head>
+
+<body class="login" onresize="mudouTamanhoTela()">
+    <!-- Inicio header -->
+    <header id="header" class="position-fixed w-100">
+        <nav id="nav-init" class="navbar navbar-expand-md nav-colored">
+            <div class="container" id="nav-container">
+                <a href="index.html" class="navbar-brand">
+                    <!-- <img src="images/logo.png" width="142px"> -->
+                    <h2 class="text-white">Brand</h1>
+                </a>
+
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#nav-target"
+                    id="button-entrar" onclick="mudarImagem()">
+                    <span class="fas fa-bars border-0 m-0 text-light" style="font-size: 1.5em;"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="nav-target">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="home.html" class="nav-link">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">LINK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">LINK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">LINK</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fim do header -->
+
+    <section class="login d-flex justify-content-center align-items-center">
+        <div class="card d-flex justify-content-center">
+            <h1 class="text-center mt-5 mx-5 text-blue">Sing In To Developer</h1>
+
+            <div class="social-midia d-flex justify-content-center">
+                <i class="fab fa-facebook icon" style="color: #0572E6;"></i>
+                <i class="fab fa-google icon" style="color: red;"></i>
+            </div>
+            <p class="text-center">Or use your email account</p>
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <form action="">
+                    <div class="input-group">
+                        <label for="email"><i class="fas fa-envelope icon" style="color: #0572E6;"></i></label>
+                        <input type="text" name="email" id="email" class="form-control input" placeholder="Email">
+                    </div>
+                    <div class="input-group mt-3">
+                        <label for="password"><i class="fas fa-lock icon" style="color: #0572E6;"></i></label>
+                        <input type="password" name="password" id="password" class="form-control input"
+                            placeholder="Password">
+                    </div>
+
+                    <div class="d-flex justify-content-center flex-column">
+                        <a href="#" class="text-right">Forgot your password?</a>
+                        <button type="submit" class="btn mt-5 mx-5">SING IN</button>
+                        <p class="text-center my-3">Don't have an account?</p>
+                        <button type="button" class="btn mx-5 mb-5">SING UP</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script>
+        function mudarImagem() {
+            let span = document.getElementById('button-entrar').children[0]
+            let classLista = span.classList
+
+            if (classLista.contains('fa-bars')) {
+                classLista.remove('fa-bars')
+                icone = 'fa-times'
+            } else {
+                classLista.remove('fa-times')
+                icone = 'fa-bars'
+            }
+
+            classLista.add(icone)
+
+        }
+
+        window.onscroll = function () { mudouTamanhoTela() };
+
+
+        // Get the offset position of the navbar
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function mudouTamanhoTela() {
+            // let navbar = document.getElementById("nav-init");
+            // let sticky = navbar.offsetTop;
+
+            // if (window.pageYOffset > sticky) {
+            //     console.log('dadiciadsi')
+            //     // navbar.classList.remove("nav-colored")
+            //     navbar.classList.add("fixed")
+            //     // navbar.classList.add("nav-white")
+            // } else {
+            //     navbar.classList.remove("fixed");
+            //     // navbar.classList.remove("nav-white")
+            //     // navbar.classList.add("nav-colored")
+            // }
+
+            let header = document.getElementById('header')
+            header.style.marginBottom = header.clientHeight + 'px'
+        }
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
